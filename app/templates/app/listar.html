@@ -1,0 +1,63 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/listar.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<h1>Lista de registro de Alumnos</h1>
+
+<table class="alumno">
+
+  <tr>
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Fecha de nacimiento</th>
+    <th>Edad</th>
+    <th>Email</th>
+    <th>Telefono</th>
+    <th>Estado</th>
+    <th colspan="2">Opciones</th>
+  </tr>
+
+  {% for p in registrosform %}
+
+  <tr>
+    <td> {{ p.Codigo | title }} </td>
+    <td> {{ p.Nombre | title }} </td>
+    <td> {{ p.Apellido_paterno | title }} </td>
+    <td> {{ p.Apellido_materno | title }} </td>
+    <td> {{ p.Fecha_nacimento| title }} </td>
+    <td> {{ p.Edad | title }} </td>
+    <td> {{ p.Email | title }} </td>
+    <td> {{ p.Telefono | title }} </td>
+    <td> 
+      {% if p.Estado == 0 %} 
+      Activo
+      {% elif p.Estado == 1 %} 
+      Inactivo
+      {% else %}
+      Estado desconocido
+      {% endif %}
+    </td>
+
+    <td>
+        <button><a href="{% url 'modif' p.id %}"> Modificar</a></button>
+      
+    </td>
+    <td>
+      <button><a href="{% url 'registro' p.id %}"> Registro</a></button>
+    </td>
+
+  </tr>
+
+  {% endfor %}
+  
+</table>
+
+{% endblock %}

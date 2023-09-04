@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'app/css/home.css'%}">
+{% endblock %}
+
+
+{% block contenido %}
+
+<div class="con">
+    <h2 class="title"> REGISTRAR ALUMNOS </h2>
+</div>
+
+<div class="contenedor">
+    <div class="registro">
+        <form action="" method="post">
+    
+            {% csrf_token%}
+    
+            {{form}}
+
+            <br>
+            <button  type="submit" value="guardar" class="button">GUARDAR</button>
+            <button type="reset" value="cancelar">CANCELAR</button> 
+        </form>
+    </div>
+
+    {{ mensaje }}
+
+</div>
+{% endblock %}

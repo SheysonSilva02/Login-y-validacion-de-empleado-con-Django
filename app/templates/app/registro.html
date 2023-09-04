@@ -1,0 +1,90 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/registro.css' %}">
+{% endblock %}
+
+{% block contenido %}
+
+<h1> REGISTRO DEL ALUMNO </h1>
+
+<table class="alumno">
+  
+  <tr>
+    <th>Codigo</th>
+    
+    <td> {{ registrosform.Codigo }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Nombre</th>
+    
+    <td> {{ registrosform.Nombre }} </td>
+    
+  </tr>
+
+
+  <tr>
+    <th>Apellido Paterno</th>
+    
+    <td> {{ registrosform.Apellido_paterno }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Apellido Materno</th>
+    
+    <td> {{ registrosform.Apellido_materno }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Fecha de Nacimiento</th>
+    
+    <td> {{ registrosform.Fecha_nacimento }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Edad</th>
+    
+    <td> {{ registrosform.Edad }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Email</th>
+    
+    <td> {{ registrosform.Email }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Telefono</th>
+    
+    <td> {{ registrosform.Telefono }} </td>
+    
+  </tr>
+
+  <tr>
+    <th>Estado</th>
+
+    <td> 
+      {% if registrosform.Estado == 0 %} 
+      Activo
+      {% elif registrosform.Estado == 1 %} 
+      Inactivo
+      {% else %}
+      Estado desconocido
+      {% endif %}
+    </td>
+  </tr>
+
+
+</table>
+
+
+{% endblock %}

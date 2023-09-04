@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+.con{
+    display: block;
+    flex-direction: column;
+    margin: 25px 5px -70px;
+    padding-top: 20px;
+    white-space: nowrap;
+}
+
+.title{
+    margin: 10px 10px 10px;
+    font-size: 34px;
+    text-align: center;
+    align-content: center;
+    font-weight:100px;
+    font-family: 'Lilita One', cursive;
+    color: rgb(3, 48, 63);
+}
+
+.contenedor{
+    margin: 87px 600px 0px;
+    border-radius: 10px;
+   /* background-color:  #abc6cb;*/
+    width: 500px;
+    padding: 0px;
+    height: 650px;
+    border-style: solid;
+    border-color: #889294;
+}
+
+.registro{
+    position: absolute;
+    margin: 20px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: #baacac00;
+    padding: 40px;
+}
+
+input {
+    width: 100%;
+    min-height: 25px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+    color: --maroon;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+select {
+    width: 80%;
+    min-height: 25px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+    color: --maroon;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: --maroon;
+}
+
+.btns {
+    margin: 80px;
+    width: 30%;
+    position: relative;
+    height: 250px;
+    border-radius: 5px;
+    padding: 20px;
+    left: 280px;
+   
+}
+
+button {
+    margin: 10px 0;
+    height: 40px;
+    width: 100%;
+    color: #cfc9e1;
+    background-color: #305860;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: .3rem;
+    letter-spacing: 2px;
+
+    &:hover {
+        animation-name: btn-hov;
+        animation-duration: 550ms;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes btn-hov {
+    100% {
+        background-color: #cfc9e1;
+        color: #15292d;
+        transform: scale(1.05)
+    }
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}

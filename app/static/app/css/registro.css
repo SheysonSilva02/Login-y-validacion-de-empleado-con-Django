@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+.empleados{
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.alumno td, .alumno th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+  
+.alumno th {
+    padding-top: 10px;
+    background-color: #0c414c;
+    color: white;
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+}
+
+.alumno td {
+    width: 50%;
+    padding-top: 30px;
+    background-color: #a0cace;
+    color: rgb(0, 0, 0);
+    text-align: left;
+
+}
